@@ -25,6 +25,7 @@ create_mainfest_file(){
     cd ~ &&
     sed -i "s/cloud_fonudray_name/${IBM_APP_NAME}/g" ${SH_PATH}/IBM-RSSHub/manifest.yml &&
     sed -i "s/cloud_fonudray_mem/${IBM_MEM_SIZE}/g" ${SH_PATH}/IBM-RSSHub/manifest.yml && 
+    sed -i "s/1200/8080/g" ${SH_PATH}/IBM-RSSHub/RSSHub/lib/config.js
     echo "配置完成。"
 }
 
