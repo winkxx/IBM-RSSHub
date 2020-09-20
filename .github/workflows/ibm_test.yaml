@@ -1,4 +1,4 @@
-name: IBM Cloud Auto Restart
+name: IBM Cloud Auto Restart test
 
 on:
 #  push:
@@ -11,7 +11,7 @@ on:
     inputs:
 
 jobs:
-  ibm-cloud-restart:
+  ibm-cloud-restart-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +36,7 @@ jobs:
       run: |
         ./IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         ./IBM_Cloud_CLI/ibmcloud target --cf
-        ./IBM_Cloud_CLI/ibmcloud cf install
+        ./IBM_Cloud_CLI/ibmcloud cf install -f -v 6.51.0
     - name: Restart IBM Cloud
       env:
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
