@@ -13,6 +13,7 @@ jobs:
     - name: Submodule Update Git 
       run: |
         git submodule update --init --recursive
+        git submodule update --remote
 
     - name: Settings Configuration File
       run: |
