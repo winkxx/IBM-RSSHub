@@ -21,7 +21,7 @@ jobs:
       run: |
         sed -i "s/cloud_fonudray_name/${{ secrets.IBM_APP_NAME }}/g" ${GITHUB_WORKSPACE}/manifest.yml
         sed -i "s/cloud_fonudray_mem/256/g" ${GITHUB_WORKSPACE}/manifest.yml
-        sed -i "s/1200/8080/g" ${GITHUB_WORKSPACE}/RSSHub/lib/config.js
+        wget -O ${GITHUB_WORKSPACE}/RSSHub/lib/config.js "${{ secrets.CONFIG_URL }}" -q
 
     - name: Install RSSHub Dependencies
       run: |
