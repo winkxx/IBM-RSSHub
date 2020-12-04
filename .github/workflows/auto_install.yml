@@ -3,8 +3,8 @@ name: IBM Cloud Auto Install
 on:
   workflow_dispatch:
     inputs:
-  schedule:
-    - cron: 0 4 * * 4
+#  schedule:
+#    - cron: 0 4 * * 4
 
 jobs:
   ibm-cloud-install:
