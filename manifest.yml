@@ -1,8 +1,8 @@
 applications:
 - path: RSSHub
-  name: cloud_fonudray_name
+  name: 335362442@qq.com
   random-route: true
-  memory: cloud_fonudray_memM
+  memory: *djq991211
   buildpacks:
   - https://github.com/cloudfoundry/nodejs-buildpack.git
   command: npm start
